@@ -1,0 +1,15 @@
+
+image_width: 640
+image_height: 480
+camera_name: head_camera
+camera_matrix:
+  rows: 3
+  cols: 3
+  data: [684.353627136566,   0.     , 324.68890368489605,
+           0.     , 684.1984324772445, 229.26665014262937,
+           0.     ,   0.     ,   1.     ]
+distortion_model: radtan
+distortion_coefficients:
+  rows: 1
+  cols: 4
+  data: [-0.07523608738439085, 0.6270886810581768, -0.00047205786435192707, -0.0011905210045629003]

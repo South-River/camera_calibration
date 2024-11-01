@@ -1,0 +1,23 @@
+#-------------------MVSUA camera param-------------------------#
+
+# MVSUA31相机 107fps 752x480
+# MVSUA231相机 40fps 1920x1200
+# TODO: 目前仅仅支持所有相机一样的bit 深度 用一样的格式发布
+MVSUA1:
+  width:    1280 #图像长宽以及图片中心偏置
+  height:   1024
+  w_offset: 0
+  h_offset: 0
+
+  # speed: 5 #相机帧率(0 ~ iFrameSpeedDesc-1)  FIXME:对图像质量有影响吗
+  speed: 10 #相机帧率(0 ~ iFrameSpeedDesc-1)  FIXME:对图像质量有影响吗
+
+  analog_gain:         70      #模拟增益 20： Gain=1   # 50:3.25  0.0625
+  gamma:               50      #设定LUT动态生成模式下的Gamma值
+  saturation:          100     #图像饱和度
+  shaprpness:          0       #图像锐化参数
+  # exposure_time:      0.5     #曝光时间ms(0: auto) max:59
+  # exposure_time:      30.0     #曝光时间ms(0: auto) max:59
+  autoexposure_target: 100     #自动曝光的亮度目标值
+  # pixel_bit:           4095    #像素深度  255(8bit)  4095(12bit)
+  # format:              "mono16"    #cv 保存格式  bgr8: CV_8UC3  mono8: CV_8UC1  mono16: CV_16UC1   rgb8: CV_8UC3

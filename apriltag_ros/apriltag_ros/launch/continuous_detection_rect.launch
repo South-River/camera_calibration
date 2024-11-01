@@ -1,0 +1,15 @@
+<launch>
+  <!-- set to value="gdbserver localhost:10000" for remote debugging -->
+  <arg name="launch_prefix" default="" />
+
+  <!-- 生成一个 image_proc/rectify nodelet 来校正 深度图像 -->
+  <node pkg="image_proc" type="image_proc" name="image_proc" respawn="true">
+    <!-- image_mono：未矫正的的图像输入端口  image_rect：经过校正后的图像输出端口  -->
+    <!-- depth/image_raw：未矫正的的图像的相机端输出端口  depth/image_rect：经过校正后的图像输出端口  -->
+    <param name="image_mono"  value="/cam_topic/image_raw" />
+    <param name="interpolation"  value="0" />
+    <param name="image_rect"  value="/cam_topic/image_rect" />
+  </node>
+
+  <node pkg="camera_info" type="camera_info" name="camera_info" output="screen"/>
+</launch>
