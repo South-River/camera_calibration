@@ -11,8 +11,9 @@ using namespace cv;
 sensor_msgs::CameraInfo getCameraInfo(void){        // extract cameraInfo.
     sensor_msgs::CameraInfo cam;
 
-    vector<double> D{0.010922, -0.000855, -0.021676, 0.015643, 0.000000};
-    boost::array<double, 9> K = {
+    vector<double> D {0.010922, -0.000855, -0.021676, 0.015643, 0.000000};
+    boost::array<double, 9> K = 
+    {
         390.77206,   0.     , 622.97068,
            0.     , 390.84936, 502.86414,
            0.     ,   0.     ,   1.        
@@ -57,5 +58,3 @@ int main(int argc, char** argv) {
     ros::spin();
     return 0;
 }
-
-

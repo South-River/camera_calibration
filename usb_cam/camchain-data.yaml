@@ -1,8 +1,0 @@
-
-  cam_overlaps: []
-  camera_model: omni-radtan
-  distortion_coeffs: [-0.07523609 0.62708868 -0.00047206 -0.00119052]
-  distortion_model: none
-  intrinsics: [2.20685451 684.35362714 684.19843248 324.68890368 229.26665014]
-  resolution: [640, 480]
-  rostopic: /usb_cam/image_raw4

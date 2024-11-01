@@ -1,5 +1,5 @@
 <launch>
-  <arg name="camera_exposure_time" default="1.2"/>
+  <arg name="camera_exposure_time" default="1.0"/>
   <arg name="cam_topic" default="cam_topic"/>
   <arg name="cam_trigger_topic" default="cam_trigger_topic"/>
 

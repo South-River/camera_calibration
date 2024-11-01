@@ -22,4 +22,10 @@
     <rosparam command="load" file="$(find apriltag_ros)/config/settings.yaml"/>
     <rosparam command="load" file="$(find apriltag_ros)/config/tags.yaml"/>
   </node>
+
+  <include file="$(find mvsua_ros_driver)/launch/camera_driver.launch"/>
+
+  <group ns="cam_topic">
+    <node pkg="image_proc" type="image_proc" name="image_proc" output="screen"/>
+  </group>
 </launch>
